@@ -12,6 +12,10 @@ const routes: Routes = [
     redirectTo: 'home',// Redirection vers la page "home"
     pathMatch: 'full' // Correspondance complète du chemin
   },
+  {
+    path: 'test',
+    loadChildren: () => import('./test/test.module').then( m => m.TestPageModule)
+  },
 ];
 // Configuration du module de routage avec les routes définies
 @NgModule({

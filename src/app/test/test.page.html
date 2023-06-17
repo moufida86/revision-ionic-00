@@ -1,0 +1,63 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>test des formulaires</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+ <h1>Bonjour {{ name }} vous avez {{ age }} ans </h1>
+ {{age + 6}}
+ <ion-button (click)="getOlder()" expand="block" color="{{buttonColor}}">Bon anniversaire</ion-button>
+<ion-list>
+  <ion-item>
+    <ion-label position="floating" color="primary">Nom</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating" color="primary">Prénom</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Languages</ion-label>
+    <ion-select okText="valider" cancelText="annuler" multiple="true">
+      
+        <ion-select-option selected>C++</ion-select-option>
+        <ion-select-option>Java</ion-select-option>
+        <ion-select-option>Python</ion-select-option>
+      </ion-select>
+      
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Bio</ion-label>
+    <ion-textarea rows="5"></ion-textarea>
+  </ion-item>
+
+  <ion-list-header>Sexe</ion-list-header>
+
+  <ion-item>
+    <ion-label>Femme</ion-label>
+    <ion-radio value="F" slot="start"></ion-radio>
+  </ion-item>
+  <ion-item>
+    <ion-label>Homme</ion-label>
+    <ion-radio value="M" slot="start"></ion-radio>
+  </ion-item>
+
+
+<ion-item>
+  <ion-range min="10" max="80" step="10" pin="true" tick="true" snaps="true"></ion-range>
+  <ion-icon small slot="start" name="sunny" color="dark"></ion-icon>
+  <ion-icon  slot="end" name="sunny" color="medium"></ion-icon>
+</ion-item>
+
+<ion-item>
+  <ion-label>rember me</ion-label>
+  <ion-toggle slot="end" mode="ios"></ion-toggle>
+</ion-item>
+</ion-list>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-button color="primary" expand="full">Valider</ion-button>
+  </ion-toolbar>
+</ion-footer>
